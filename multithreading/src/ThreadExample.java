@@ -1,3 +1,4 @@
+/*
 class Eclipse extends Thread
 {
 	public void run()
@@ -12,13 +13,33 @@ class MSEdge extends Thread
 		System.out.println("msedge id"+Thread.currentThread().getId());
 	}
 }
+*/
+
+class Eclipse implements Runnable
+{
+	public void run()
+	{
+		System.out.println("Eclipse id"+Thread.currentThread().getId());
+	}
+}
+class MSEdge implements Runnable
+{
+	public void run()
+	{
+		System.out.println("msedge id"+Thread.currentThread().getId());
+	}
+}
+
 public class ThreadExample {
 public static void main(String[] args)
 {
 	Eclipse ob=new Eclipse();
-	ob.start();
+	Thread t=new Thread(ob);
+	t.start();
+	
 	MSEdge ob1=new MSEdge();
-	ob1.start();
+	Thread t1=new Thread(ob1);
+	t1.start();
 
 }
 }
