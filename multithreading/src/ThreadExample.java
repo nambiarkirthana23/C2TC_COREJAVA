@@ -14,7 +14,6 @@ class MSEdge extends Thread
 	}
 }
 */
-
 class Eclipse implements Runnable
 {
 	public void run()
@@ -29,16 +28,17 @@ class MSEdge implements Runnable
 		System.out.println("msedge id"+Thread.currentThread().getId());
 	}
 }
-
 public class ThreadExample {
 public static void main(String[] args)
 {
 	Eclipse ob=new Eclipse();
 	Thread t=new Thread(ob);
+	t.setPriority(Thread.MIN_PRIORITY);
 	t.start();
 	
 	MSEdge ob1=new MSEdge();
 	Thread t1=new Thread(ob1);
+	t1.setPriority(Thread.MAX_PRIORITY);
 	t1.start();
 
 }
