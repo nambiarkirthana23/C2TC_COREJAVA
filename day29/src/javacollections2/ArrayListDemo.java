@@ -5,8 +5,8 @@ public class ArrayListDemo {
 		ArrayList<String>list1=new ArrayList();
 		
 		list1.add("java");              //insert the value in a list
-		list1.add("C");
 		list1.add("python");
+		list1.add("C");
 		list1.add("C++");
 		list1.add("PHP");
 		list1.add(".Net");
