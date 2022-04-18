@@ -23,7 +23,7 @@ public class DemoDateofTime {
 		LocalDateTime ld4=LocalDateTime.of(1008,Month.APRIL,20,0,0);
 		System.out.println(ld4);
 		
-		LocalDateTime ld5=LocalDateTime.now(ZoneId.of("GMI"));
+		LocalDateTime ld5=LocalDateTime.now(ZoneId.of("GMT"));
 		System.out.println(ld5);
 	}
 
